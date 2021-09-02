@@ -1,0 +1,38 @@
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@mixin flex-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+@mixin mq($width:"mobile") {
+
+    // mobile
+    @if ($width=='mobile') {
+        @media (max-width:768px) {
+            @content;
+        }
+    }
+
+    // tablet
+    @else if ($width=='tablet') {
+        @media (max-width:992px) {
+            @content;
+        }
+    }
+
+    // desktop
+
+    @else if ($width=='desktop') {
+        @media (max-width:1170px) {
+            @content;
+        }
+    }
+}

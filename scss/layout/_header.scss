@@ -1,0 +1,77 @@
+.header {
+    padding-top: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 500ms;
+    &-logo{
+        cursor: pointer;
+    }
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $border;
+        padding-bottom: 38px;
+
+
+        #bar {
+            display: none;
+        }
+
+    }
+
+    &.active{
+        position: fixed;
+        padding-top: 15px;
+        background-color: #30344F;
+
+       
+    }
+
+    &.active .header-inner{
+        padding-bottom: 15px;
+        border: none;
+        transition: all 500ms;
+    }
+    
+
+ 
+
+    @include mq("tablet") {
+        padding-top: 15px;
+       
+        background-color: #30344F;
+
+
+        #bar {
+            display: block;
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+            transition: all 350ms;
+        }
+
+        &-inner {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            border: none;
+        }
+
+
+        .fa-times {
+            transform: rotate(-360deg);
+            
+        }
+
+    }
+}
+
+
+
+
+
+

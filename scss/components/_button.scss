@@ -1,0 +1,18 @@
+@mixin btn {
+
+    display: inline-block;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 13px 40px;
+    background-color: $btn-color;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 2px;
+    line-height: 1.615;
+    min-width: 200px;
+
+    &:hover {
+        background-color: #c43939;
+    }
+}

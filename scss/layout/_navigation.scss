@@ -1,0 +1,77 @@
+nav {
+    font-size: 1.3rem;
+
+    ul {
+        display: flex;
+
+        li {
+
+            a {
+                color: #fff;
+                margin-left: 50px;
+                transition: opacity 500ms;
+                opacity: .75;
+                text-transform: uppercase;
+                font-weight: 700;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &:first-child a {
+                margin-left: 0;
+            }
+
+        }
+
+    }
+
+    @include mq("tablet") {
+
+        & {
+
+            ul {
+
+                flex-direction: column;
+                position: fixed;
+                width: 100%;
+                left: 0;
+                background-color: #30344F;
+                margin-top: 18px;
+                align-items: center;
+                transform: scaleY(0);
+                transform-origin: top;
+                opacity: 0;
+                transition: all 500ms;
+
+                &.active {
+                    transform: scaleY(1);
+                    opacity: 1;
+
+                }
+
+
+                li {
+                    a {
+                        margin-top: 30px;
+                        display: inline-block;
+                        text-align: center;
+                        margin-left: inherit;
+                    }
+
+
+
+                    &:last-child a {
+                        margin-bottom: 30px;
+                    }
+
+
+
+                }
+
+
+
+            }
+        }
+    }
+}
